@@ -72,7 +72,7 @@ import UIKit
     }
     
     override public func drawTextInRect(rect: CGRect) {
-        CGContextSetFillColorWithColor(UIGraphicsGetCurrentContext()!, fillColor?.CGColor)
+        CGContextSetFillColorWithColor(UIGraphicsGetCurrentContext()!, (fillColor?.CGColor)!)
         backgroundPath.fill()
         super.drawTextInRect(textInsets.inset(rect))
     }

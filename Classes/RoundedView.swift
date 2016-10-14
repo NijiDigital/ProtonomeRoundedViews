@@ -39,7 +39,7 @@ import UIKit
     // MARK: - Overrides
     
     override public func drawRect(rect: CGRect) {
-        CGContextSetFillColorWithColor(UIGraphicsGetCurrentContext()!, fillColor?.CGColor)
+        CGContextSetFillColorWithColor(UIGraphicsGetCurrentContext()!, (fillColor?.CGColor)!)
         backgroundPath.fill()
         super.drawRect(rect)
     }
