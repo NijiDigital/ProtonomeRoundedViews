@@ -92,15 +92,15 @@ private extension UIImage {
         
         let context = UIGraphicsGetCurrentContext()
         
-        CGContextSetFillColorWithColor(context, color.CGColor)
-        CGContextAddPath(context, path)
-        CGContextFillPath(context)
+        CGContextSetFillColorWithColor(context!, color.CGColor)
+        CGContextAddPath(context!, path)
+        CGContextFillPath(context!)
         
         let image = UIGraphicsGetImageFromCurrentImageContext()
         
         UIGraphicsEndImageContext()
         
-        return image.resizableImageWithCapInsets(UIEdgeInsets(top: cornerRadius, left: cornerRadius, bottom: cornerRadius, right: cornerRadius), resizingMode: .Stretch)
+        return image!.resizableImageWithCapInsets(UIEdgeInsets(top: cornerRadius, left: cornerRadius, bottom: cornerRadius, right: cornerRadius), resizingMode: .Stretch)
     }
     
 }
